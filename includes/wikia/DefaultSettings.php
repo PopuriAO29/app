@@ -1940,6 +1940,9 @@ require_once "$IP/extensions/wikia/Pages/Pages.setup.php";
 // SUS-3455: Special:ListGlobalUsers for all wikis
 require_once "$IP/extensions/wikia/ListGlobalUsers/ListGlobalUsers.setup.php";
 
+// hackathon project
+require_once "$IP/extensions/wikia/DiscussionsActivity/DiscussionsActivity.setup.php";
+
 // SRE-76: Logging classes that have been initially defined in config.
 $wgAutoloadClasses['AuditLog'] = "$IP/includes/wikia/AuditLog.class.php";
 
