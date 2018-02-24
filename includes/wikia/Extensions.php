@@ -17,10 +17,7 @@ switch ($wgWikiaDatacenter) {
 		break;
 }
 
-/**
- * define extension directory based on IP variable
- */
-$wgExtensionsDirectory = $IP . "/extensions";
+
 
 
 /**
@@ -1503,20 +1500,6 @@ if( !empty( $wgEnableEditorSyntaxHighlighting ) ) {
 
 if ( !empty( $wgEnableCloseMyAccountExt ) ) {
 	include "$IP/extensions/wikia/CloseMyAccount/CloseMyAccount.setup.php";
-}
-
-/**
- * Add a rate limit on IPs on Russian wikias
- *
- * Throttle edits at 6 per minute per IP address.
- *
- * Needs to go in here so that the language
- * of the wikia is available.
- *
- * @see CE-601
- */
-if ( $wgLanguageCode === 'ru' ) {
-	$wgRateLimits['edit']['ip'] = [ 6, 60 ];
 }
 
 if ( $wgWikiaEnvironment !== WIKIA_ENV_PROD && $wgWikiaEnvironment !== WIKIA_ENV_DEV ) {

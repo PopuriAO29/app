@@ -34,6 +34,10 @@ $wgWikiaEnvironment = getenv( 'WIKIA_ENVIRONMENT' );
 
 // CONFIG_REVISION: remove $wgWikiaDatacenter and $wgWikiaEnvironment from the global scope and only use it to load configuration
 
+require_once( "$IP/includes/DefaultSettings.php" );
+require "$IP/../config/base.php";
+require_once( "$IP/includes/wikia/DefaultSettings.php" );
+
 // the rest of the old contents
 require "$IP/../config/LocalSettings.php";
 require_once "$IP/includes/wikia/Extensions.php";
